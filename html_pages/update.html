@@ -1,0 +1,53 @@
+
+{% extends "home.html" %}
+{% block box %}
+<div class="container">
+        <form role="search" method="get" action="/search/update" style="margin-left:350px; margin-top:50px">
+                <div class="container-fluid">
+                <input type="text" placeholder="Enter Item Name" name="search" style="border-radius:2px">
+                <button type="submit" class="btn btn-success"  > SEARCH </button>
+                </div>
+ </form>
+   <form action="/update" method="POST" style="margin-left:350px; margin-top:50px">
+        <div class="form-group">
+                <label for="inputer" > INPUTER NAME: </label> </br>
+                <div class="col-sm-4">
+                <input type="text" name="id_v" value="{{id_val}}" style="display: none">
+                <input type="text" class="form-control" name="inputer_field" value="{{inputer_field}}" >
+                </div>
+        </div>  
+        <div class="form-group">
+                <label for="item"> ITEM NAME: </label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="item_field" value="{{item_field}}" >
+                </div>
+        </div> 
+        <div class="form-group">
+                <label for="DESCRIPTION"> DESCRIPTION: </label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="description_field" value="{{description_field}}">
+                </div>
+        </div> 
+
+        <div class="form-group" >
+                <label for="QUANTITY"> QUANTITY: </label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="quantity_field" value="{{quantity_field}}">
+                </div>
+        </div>
+        <div class="form-group">
+        
+                <label for="PRICE"> PRICE<label > * </label> </label>
+                <div id="price" class="col-sm-4">
+                        <input type="text" class="form-control" name="price" value="{{price}}">
+                </div>
+                <div id="price_r" style="color:red"></div>
+        </div>
+                <div class="col-8">
+                <button type="submit" class="btn btn-success" id="btnsave" name="update"> UPDATE </button>
+                </div>
+             
+</div>
+</form>
+{% endblock %}
+

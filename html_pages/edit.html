@@ -1,0 +1,90 @@
+{% extends "home.html" %}
+
+
+{% block box %}
+<div class="container">
+
+        <form name="addeven" action="/edith" method="POST" onsubmit="return _validate(event)"  style="margin-left:350px; align-items: center" >
+                <div class="col"> 
+        
+                        <label for="content" class=col-12> <b>  UPDATE  INVENTORY </b> </label>
+                </div>
+                <div class="form-group">
+                        <div class="col-sm-4">
+                                {% if id %}
+                                <input type="text" name="id_val" {{ id }} value="{{id}}"  style="display: none">
+                               {% endif %}
+                        </div>
+                </div>
+        <div class="form-group">
+        
+                <label for="DESCRIPTION"> Inputer Name <label style="color: red"> * </label> </label>
+                <div id="description" class="col-sm-4">
+                        {% if inputer %}
+                        <input type="text" class="form-control" {{ inputer }} name="inputer" value="{{inputer}}">
+                        {% endif %}
+                        <div id="description_r" style="color: red"></div>
+                </div>
+        
+        </div>
+                           
+                
+                <div class="form-group">
+                
+                        <label for="DESCRIPTION"> Item Name<label style="color: red"> * </label> </label>
+                        <div id="description" class="col-sm-4">
+                                {% if item %}
+                                <input type="text" class="form-control" {{ item }} name="item" value="{{item}}">
+                                {% endif %}
+                                <div id="description_r" style="color: red"></div>
+                        </div>
+                
+                </div>
+                        <div class="form-group">
+                
+                                <label for="DESCRIPTION"> DESCRIPTION<label style="color: red"> * </label> </label>
+                                <div id="description" class="col-sm-4">
+                                        {% if description %}
+                                <input type="text" class="form-control" {{ description }} name="description" value="{{description}}" >
+                                {% endif %}
+                                <div id="description_r" style="color: red"></div>
+                                </div>
+                                
+                          </div>
+        
+                           <div class="form-group" >
+                
+                               <label for="QUANTITY"> QUANTITY <label style="color: red"> * </label> </label>
+                                <div id="quantity" class="col-sm-4">
+                                        {% if quantity %}
+                                <input type="text" class="form-control" {{ quantity }} name="quantity" value="{{quantity}}"  >
+                                {% endif %}
+                                <div  id="quantity_r" style="color: red"></div>
+                         
+                               </div>
+                           </div>
+                
+        
+                <div class="form-group" >
+        
+                                <label for="PRICE"> PRICE<label style="color: red"> * </label> </label>
+                                <div id="price" class="col-sm-4">
+                                {% if price %}
+                                <input type="text" class="form-control" {{ price  }} name="price" value="{{price}}" >
+                                {% endif %}
+                                </div>
+                               
+                        <div  id="price_r" style="color:red"></div>
+                </div>
+        
+        
+        
+                        <div class="col-8">
+                        <button type="submit" class="btn btn-primary" data-toggle="tooltip" title="ADD ITEM" id="btnsave"> UPDATE RECORD </button>
+                        </div>
+        
+        </form>
+</div>
+
+
+{% endblock %}

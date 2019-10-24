@@ -1,0 +1,65 @@
+{% extends "home.html" %}
+
+
+{% block box %}
+<div class="container">
+
+        <form name="addeven" action="/addeven.html" method="POST" onsubmit="return _validate(event)"  style="margin-left:350px; align-items: center" >
+                <div class="col"> 
+        
+                        <label for="content" class=col-12> <b>  ADD ITEM TO THE INVENTORY </b> </label>
+                </div>
+        
+                <div class="form-group">
+                                <label for="inputer"  > INPUTER NAME<label style="color: red"> * </label> </label> 
+                             <div id="inputer_name" class="col-sm-4">
+                                <input type="text" class="form-control" name="inputer_name" >
+                                <div id="inputer_name_r" style="color: red"></div>
+                              </div>
+                </div>
+                <div class="form-group" >
+                                <label for="item" > ITEM NAME <label style="color: red"> * </label> </label>
+                                <div id="item_name" class="col-sm-4">
+                                <input type="text" class="form-control" name="item_name"  >
+                                </div>
+                                <div id="item_name_r" style="color: red"></div>
+                     </div>
+                        <div class="form-group">
+                
+                                <label for="DESCRIPTION"> DESCRIPTION<label style="color: red"> * </label> </label>
+                                <div id="description" class="col-sm-4">
+                                <input type="text" class="form-control" name="description" >
+                                <div id="description_r" style="color: red"></div>
+                                </div>
+                          </div>
+        
+                           <div class="form-group" >
+                
+                               <label for="QUANTITY"> QUANTITY <label style="color: red"> * </label> </label>
+                                <div id="quantity" class="col-sm-4">
+                                <input type="text" class="form-control" name="quantity"  >
+                                <div  id="quantity_r" style="color: red"></div>
+                               </div>
+                           </div>
+                
+        
+                <div class="form-group" >
+        
+                                <label for="PRICE"> PRICE<label style="color: red"> * </label> </label>
+                                <div id="price" class="col-sm-4">
+                                <input type="text" class="form-control" name="price"  >
+                                </div>
+                        <div  id="price_r" style="color:red"></div>
+                </div>
+        
+        
+        
+                        <div class="col-8">
+                        <button type="submit" class="btn btn-primary" data-toggle="tooltip" title="ADD ITEM" id="btnsave"> ADD ITEM </button>
+                        </div>
+        
+        </form>
+</div>
+
+
+{% endblock %}

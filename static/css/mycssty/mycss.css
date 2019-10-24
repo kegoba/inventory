@@ -1,0 +1,21 @@
+form{
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    text-align: center
+}
+.col1{
+    width: 10px;
+    height: 100px;
+}
+#btnsave{
+    height: 100%;
+}
+.form {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 160px;
+    align-content: center
+}

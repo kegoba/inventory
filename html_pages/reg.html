@@ -1,0 +1,91 @@
+{% extends "home.html" %}
+{% block box %}
+</br>
+<div class="container">
+ <form action="/reg" name="reg" method="POST" onsubmit="return reg_validation(event)" style="margin-left:350px; align-items: center" > 
+    <div class="row">
+        <div class="col-4">
+        <label for="fname"> FirstName </label>
+        <input type="text" class="form-control" autocomplete="off" name="fname" id="fname" value="{{fname}}">
+        <div style="color:red" id="fname_r"></div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <label for="lname" > LastName  </label>
+        <input type="text" class="form-control" name="lname" id="lname" value="{{lname}}" autocomplete="off">
+        <div style="color:red" id="lname_r"></div>
+     </div>
+     </div>
+    <div class="row">
+    <div class="col-4">
+        <label for="gender" > Gender </label>
+        <select class="form-control" name="gender" id="gender"autocomplete="off" value="{{gender}}" > 
+            <option value="">  </option>
+            <option value="male"> MALE </option>
+            <option value="female"> FEMALE </option>
+        </select>
+        <div style="color:red" id="gender_r"> </div>
+       </div>
+   </div>
+        <div class="row">
+      <div class="col-4">
+        <label for="email" > Email  </label>
+        <input type="text" class="form-control" name="email" id="email" value="{{email}}" autocomplete="off">
+        <div style="color:red" id="email_r"></div>
+     </div>
+     </div>
+       <div class="row">
+         <div class="col-4">
+            <label for="password"> Password </label>
+            <input type="password" name="password1" id="password1"class="form-control" value="{{password1}}">
+            <div style="color:red" id="password1_r"></div>
+        </div>
+    </div>
+    <div class="row">
+         <div class="col-4">
+            <label for="password"> comfirm Password </label>
+            <input type="password" name="password2" id="password2"class="form-control">
+            <div style="color:red" id="password2_r"></div>
+        </div>
+    </div>
+      </br>
+    <div class="row">
+        <div class="col-4" >
+
+            <button type="submit" class="btn btn-primary" class="form-control">Submit</button>
+        </div>
+    </div>
+
+
+
+
+ </form>
+ </style>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% endblock %}

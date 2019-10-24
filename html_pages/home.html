@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.o">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='mycssty/mycs.css')}}">
+
+</head>
+<style>
+
+
+</style>
+        {% block main %}
+<body style="background-image:url('static/img/fasion.jpg')">
+    <div class="container">
+      <div class="header">
+          <div class="row">
+              <div class="col">
+                   <ul class="nav nav-pills justify-content-end">
+                       {% if  session.logged_in %}
+                
+                    
+                        <li class="nav item">
+                          <a class="nav-link {{'active' if homepage else ''}}" href="{{url_for('.homepage')}}"> HOME </a>
+                        </li>
+                        <li class="nav item">
+                            <a class="nav-link {{ 'active' if addeven else '' }}" href="{{url_for('.addeven')}}">  ADD ITEM </a>
+                        </li>
+                            <li class="nav item">
+                            <a class="nav-link {{ 'active' if update_record else ''}}" href="{{url_for('.update_record')}}">  UPDATE </a>
+                            </li>
+                            <li class="nav item">
+                                  <a class="nav-link {{ 'active' if delete_record else ''}}" href="{{url_for('.delete_record')}}">DELETE </a>
+                              </li>
+                            <li class="nav item">
+                             <a class="nav-link {{ 'active' if _view_rec else '' }}" href="{{url_for('._view_rec')}}">  VIEW RECORD </a>
+                            </li>
+                            </li>
+                            <li class="nav item">
+                                <a class="nav-link {{ 'active' if logout else '' }}" href="{{url_for('.logout')}}"> LOGOUT </a>
+                            </li>
+                            {% else %}
+                            <li class="nav item">
+                                <a class="nav-link {{ 'active' if login else ''}}" href="{{url_for('.login')}}"> LOGIN </a>
+                            </li>
+                          
+                            {% endif %}
+                    </ul>
+                </div>
+           </div>
+                  {% endblock %}
+                  
+                  {% block box %}
+                  <h1>THIS HOME PAGE</h1> 
+                  
+                  <div class="row" style="margin-top:45% ; color:blue; border: black; border-radius:2px solid black; border-color: black">
+                      <div class="col">
+                          <footer >  <strong> <center> <h3> Design by kelvin: copyright @ kentechng </h3> </center> </strong> </footer>
+                      </div>
+                  </div>  
+    {% endblock %}
+
+    <script type="text/javascript" src="{{url_for('static', filename='myjs/myreg12.js')}}"> </script>
+</body>
+</html>
